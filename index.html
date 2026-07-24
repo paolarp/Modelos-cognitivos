@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&amp;family=Source+Sans+3:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #ece7dc; }
+  a { color: #16294d; }
+  a:hover { color: #c69b3f; }
+</style>
+</helmet>
+<div style="width: 1100px; margin: 0 auto; background: #fbf7ef; font-family: 'Source Sans 3', Helvetica, sans-serif; color: #2b2b2b; box-shadow: 0 0 60px rgba(22,41,77,.18);">
+
+  <div style="display: grid; grid-template-columns: 250px 1fr 250px; align-items: stretch; border-bottom: 3px solid #16294d;">
+    <div style="background: #16294d; padding: 26px 20px; display: flex; flex-direction: column; justify-content: center; gap: 6px; border-right: 8px solid #c69b3f;">
+      <div style="font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 800; color: #ffffff; letter-spacing: 1px;">UNITEC<span style="font-size: 14px; vertical-align: super;">®</span></div>
+      <div style="font-size: 11px; color: #c8cfdd; letter-spacing: .12em; text-transform: uppercase;">Universidad Tecnológica de México</div>
+    </div>
+    <div style="padding: 22px 26px 18px; text-align: center;">
+      <div style="font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 800; color: #16294d; line-height: 1.02; letter-spacing: .5px;">MODELOS COGNITIVOS</div>
+      <div style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #c69b3f; letter-spacing: .1em; margin-top: 4px;">DE LAS ALTAS CAPACIDADES</div>
+      <div style="margin-top: 12px; background: #16294d; color: #ffffff; font-size: 14px; font-weight: 600; padding: 9px 14px; line-height: 1.4;">Teoría Triárquica y Modelo Pentagonal de Sternberg · Modelo de Castelló</div>
+    </div>
+    <div style="padding: 24px 20px; display: flex; flex-direction: column; justify-content: center; gap: 14px; border-left: 1px solid #ded5c2;">
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-size: 11px; font-weight: 700; color: #16294d; letter-spacing: .14em;">MATERIA</div>
+        <div style="font-size: 13px; color: #4e5563;">{{ materia }}</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-size: 11px; font-weight: 700; color: #16294d; letter-spacing: .14em;">ALUMNA</div>
+        <div style="font-size: 13px; color: #4e5563;">{{ alumna }}</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-size: 11px; font-weight: 700; color: #16294d; letter-spacing: .14em;">UNIDAD 2</div>
+        <div style="font-size: 13px; color: #4e5563;">Modelos cognitivos</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 8px; padding: 12px 34px; background: #f3eee2; border-bottom: 1px solid #ded5c2; align-items: center; flex-wrap: wrap;">
+    <span style="font-size: 11px; letter-spacing: .14em; color: #8a8577; font-weight: 700; margin-right: 4px;">RECORRIDO</span>
+    <a href="#b1" style="text-decoration: none; font-size: 12px; font-weight: 600; padding: 6px 12px; border: 1px solid #16294d; border-radius: 999px; background: #ffffff;" style-hover="background: #16294d; color: #ffffff;">1 · Triárquica</a>
+    <a href="#b2" style="text-decoration: none; font-size: 12px; font-weight: 600; padding: 6px 12px; border: 1px solid #16294d; border-radius: 999px; background: #ffffff;" style-hover="background: #16294d; color: #ffffff;">2 · Pentagonal</a>
+    <a href="#b3" style="text-decoration: none; font-size: 12px; font-weight: 600; padding: 6px 12px; border: 1px solid #16294d; border-radius: 999px; background: #ffffff;" style-hover="background: #16294d; color: #ffffff;">3 · Castelló</a>
+    <a href="#b4" style="text-decoration: none; font-size: 12px; font-weight: 600; padding: 6px 12px; border: 1px solid #16294d; border-radius: 999px; background: #ffffff;" style-hover="background: #16294d; color: #ffffff;">4 · Identificación</a>
+    <span style="margin-left: auto; font-size: 11px; color: #8a8577; font-style: italic;">Toca los círculos, vértices y tarjetas para explorar</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; padding: 26px 34px 8px; align-items: start;">
+    <div>
+      <div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: #c69b3f; letter-spacing: .04em;">IDEA CENTRAL</div>
+      <div style="font-size: 14px; line-height: 1.6; color: #40454f; margin-top: 6px; text-wrap: pretty;">Los modelos cognitivos conciben la inteligencia como un fenómeno multidimensional: interesa el <strong>proceso</strong> más que el producto, y se estudia cómo la persona alcanza metas relevantes en contextos específicos y genera valor para sí misma y para la sociedad.</div>
+    </div>
+    <div style="background: #fdf3dd; border: 1px solid #e6cf9c; padding: 16px 18px; position: relative;">
+      <div style="font-size: 13.5px; line-height: 1.55; color: #3c4250; font-style: italic;">La inteligencia exitosa implica aprovechar los puntos fuertes, compensar las debilidades y combinar habilidades analíticas, creativas y prácticas.</div>
+      <div style="font-size: 12px; font-weight: 700; color: #16294d; margin-top: 8px;">— Robert J. Sternberg</div>
+    </div>
+  </div>
+
+  <div id="b1" style="padding: 18px 34px 8px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 4px;">
+      <div style="width: 38px; height: 38px; border-radius: 50%; background: #16294d; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 700; font-family: 'Playfair Display', serif;">1</div>
+      <div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 800; color: #16294d;">Teoría Triárquica de la Inteligencia</div>
+        <div style="font-size: 12.5px; color: #c69b3f; font-weight: 700; letter-spacing: .06em;">ROBERT J. STERNBERG · TRES INTELIGENCIAS</div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 330px; gap: 22px; background: #f5f2ea; border: 1px solid #e3dccb; padding: 22px; align-items: center;">
+      <div style="position: relative; width: 100%; height: 420px;">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+          <polygon points="50,14 87,80 13,80" fill="#e7edf6" stroke="#16294d" stroke-width="0.4"></polygon>
+        </svg>
+
+        <div onClick="{{ pickAnalitica }}" style="position: absolute; left: 50%; top: 14%; transform: translate(-50%, -50%); width: 130px; text-align: center; cursor: pointer;">
+          <div style="width: 84px; height: 84px; margin: 0 auto; border-radius: 50%; background: #16294d; color: #ffffff; font-size: 34px; display: flex; align-items: center; justify-content: center; box-shadow: {{ shadowAnalitica }};" style-hover="transform: scale(1.06);">🧠</div>
+          <div style="font-size: 13px; font-weight: 700; color: #16294d; margin-top: 8px; line-height: 1.2;">INTELIGENCIA<br>ANALÍTICA</div>
+        </div>
+
+        <div onClick="{{ pickCreativa }}" style="position: absolute; left: 13%; top: 80%; transform: translate(-50%, -50%); width: 150px; text-align: center; cursor: pointer;">
+          <div style="width: 84px; height: 84px; margin: 0 auto; border-radius: 50%; background: #17797a; color: #ffffff; font-size: 34px; display: flex; align-items: center; justify-content: center; box-shadow: {{ shadowCreativa }};" style-hover="transform: scale(1.06);">🎨</div>
+          <div style="font-size: 13px; font-weight: 700; color: #17797a; margin-top: 8px; line-height: 1.2;">INTELIGENCIA<br>CREATIVA</div>
+        </div>
+
+        <div onClick="{{ pickPractica }}" style="position: absolute; left: 87%; top: 80%; transform: translate(-50%, -50%); width: 150px; text-align: center; cursor: pointer;">
+          <div style="width: 84px; height: 84px; margin: 0 auto; border-radius: 50%; background: #c69b3f; color: #ffffff; font-size: 34px; display: flex; align-items: center; justify-content: center; box-shadow: {{ shadowPractica }};" style-hover="transform: scale(1.06);">⚙️</div>
+          <div style="font-size: 13px; font-weight: 700; color: #a97f24; margin-top: 8px; line-height: 1.2;">INTELIGENCIA<br>PRÁCTICA</div>
+        </div>
+
+        <div style="position: absolute; left: 50%; top: 57%; transform: translate(-50%, -50%); text-align: center; width: 190px;">
+          <div style="font-size: 11px; letter-spacing: .16em; color: #7d8493; font-weight: 700;">EQUILIBRIO</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: #16294d; line-height: 1.1;">Inteligencia<br>exitosa</div>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border-top: 5px solid #16294d; padding: 18px 20px; min-height: 300px; box-shadow: 0 6px 18px rgba(22,41,77,.07);">
+        <div style="font-size: 11px; letter-spacing: .16em; color: #9a9484; font-weight: 700;">{{ triKicker }}</div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 23px; font-weight: 800; color: #16294d; margin: 4px 0 10px;">{{ triTitulo }}</div>
+        <div style="font-size: 13.5px; line-height: 1.6; color: #454b57; text-wrap: pretty;">{{ triTexto }}</div>
+        <div style="height: 1px; background: #e6e0d2; margin: 14px 0;"></div>
+        <div style="display: flex; flex-direction: column; gap: 7px;">{{ triLista }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="b2" style="padding: 24px 34px 8px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 4px;">
+      <div style="width: 38px; height: 38px; border-radius: 50%; background: #16294d; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 700; font-family: 'Playfair Display', serif;">2</div>
+      <div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 800; color: #16294d;">Modelo Pentagonal de la Superdotación</div>
+        <div style="font-size: 12.5px; color: #c69b3f; font-weight: 700; letter-spacing: .06em;">CINCO CRITERIOS QUE DEBEN CUMPLIRSE A LA VEZ</div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 330px; gap: 22px; background: #f5f2ea; border: 1px solid #e3dccb; padding: 22px; align-items: center;">
+      <div style="position: relative; width: 100%; height: 430px;">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+          <polygon points="50,10 88,38 74,84 26,84 12,38" fill="#efeadd" stroke="#b9b09a" stroke-width="0.4"></polygon>
+        </svg>
+
+        <div onClick="{{ pickExcelencia }}" style="position: absolute; left: 50%; top: 10%; transform: translate(-50%, -50%); width: 150px; text-align: center; cursor: pointer;">
+          <div style="width: 66px; height: 66px; margin: 0 auto; border-radius: 50%; background: #7a4b8c; color: #ffffff; font-size: 26px; display: flex; align-items: center; justify-content: center; box-shadow: {{ shadowExcelencia }};" style-hover="transform: scale(1.07);">⭐</div>
+          <div style="font-size: 12.5px; font-weight: 700; color: #6b3f7d; margin-top: 6px;">1. EXCELENCIA</div>
+        </div>
+        <div onClick="{{ pickRareza }}" style="position: absolute; left: 88%; top: 38%; transform: translate(-50%, -50%); width: 140px; text-align: center; cursor: pointer;">
+          <div style="width: 66px; height: 66px; margin: 0 auto; border-radius: 50%; background: #c69b3f; color: #ffffff; font-size: 26px; display: flex; align-items: center; justify-content: center; box-shadow: {{ shadowRareza }};" style-hover="transform: scale(1.07);">⭐</div>
+          <div style="font-size: 12.5px; font-weight: 700; color: #a97f24; margin-top: 6px;">2. RAREZA</div>
+        </div>
+        <div onClick="{{ pickProductividad }}" style="position: absolute; left: 74%; top: 84%; transform: translate(-50%, -50%); width: 150px; text-align: center; cursor: pointer;">
+          <div style="width: 66px; height: 66px; margin: 0 auto; border-radius: 50%; background: #17797a; color: #ffffff; font-size: 26px; display: flex; align-items: center; justify-content: center; box-shadow: {{ shadowProductividad }};" style-hover="transform: scale(1.07);">⭐</div>
+          <div style="font-size: 12.5px; font-weight: 700; color: #17797a; margin-top: 6px;">3. PRODUCTIVIDAD</div>
+        </div>
+        <div onClick="{{ pickValor }}" style="position: absolute; left: 26%; top: 84%; transform: translate(-50%, -50%); width: 140px; text-align: center; cursor: pointer;">
+          <div style="width: 66px; height: 66px; margin: 0 auto; border-radius: 50%; background: #c4553f; color: #ffffff; font-size: 26px; display: flex; align-items: center; justify-content: center; box-shadow: {{ shadowValor }};" style-hover="transform: scale(1.07);">⭐</div>
+          <div style="font-size: 12.5px; font-weight: 700; color: #b34a34; margin-top: 6px;">4. VALOR</div>
+        </div>
+        <div onClick="{{ pickDemostrabilidad }}" style="position: absolute; left: 12%; top: 38%; transform: translate(-50%, -50%); width: 150px; text-align: center; cursor: pointer;">
+          <div style="width: 66px; height: 66px; margin: 0 auto; border-radius: 50%; background: #6f9b3f; color: #ffffff; font-size: 26px; display: flex; align-items: center; justify-content: center; box-shadow: {{ shadowDemostrabilidad }};" style-hover="transform: scale(1.07);">⭐</div>
+          <div style="font-size: 12.5px; font-weight: 700; color: #5f8636; margin-top: 6px;">5. DEMOSTRABILIDAD</div>
+        </div>
+
+        <div style="position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%); text-align: center; width: 170px;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 800; color: #16294d; line-height: 1.15;">Conducta<br>superdotada</div>
+          <div style="font-size: 11px; color: #7d8493; margin-top: 4px;">los cinco criterios, juntos</div>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border-top: 5px solid #c69b3f; padding: 18px 20px; min-height: 300px; box-shadow: 0 6px 18px rgba(22,41,77,.07);">
+        <div style="font-size: 11px; letter-spacing: .16em; color: #9a9484; font-weight: 700;">{{ pentaKicker }}</div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 23px; font-weight: 800; color: #16294d; margin: 4px 0 10px;">{{ pentaTitulo }}</div>
+        <div style="font-size: 13.5px; line-height: 1.6; color: #454b57; text-wrap: pretty;">{{ pentaTexto }}</div>
+        <div style="height: 1px; background: #e6e0d2; margin: 14px 0;"></div>
+        <div style="font-size: 12.5px; line-height: 1.55; color: #6c7280; font-style: italic; text-wrap: pretty;">{{ pentaNota }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="b3" style="padding: 24px 34px 8px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 4px;">
+      <div style="width: 38px; height: 38px; border-radius: 50%; background: #16294d; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 700; font-family: 'Playfair Display', serif;">3</div>
+      <div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 800; color: #16294d;">Modelo de Castelló</div>
+        <div style="font-size: 12.5px; color: #c69b3f; font-weight: 700; letter-spacing: .06em;">DOS PERFILES · CINCO CATEGORÍAS INTELECTUALES</div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px; background: #f5f2ea; border: 1px solid #e3dccb; padding: 22px;">
+      <div>
+        <div style="display: flex; gap: 10px;">
+          <div onClick="{{ pickSuper }}" style="flex: 1; cursor: pointer; padding: 12px 14px; background: #17797a; color: #ffffff; text-align: center; box-shadow: {{ shadowSuper }};" style-hover="transform: translateY(-2px);">
+            <div style="font-size: 20px;">🟢</div>
+            <div style="font-size: 13px; font-weight: 700; letter-spacing: .1em;">SUPERDOTADO</div>
+          </div>
+          <div onClick="{{ pickTalentoso }}" style="flex: 1; cursor: pointer; padding: 12px 14px; background: #16294d; color: #ffffff; text-align: center; box-shadow: {{ shadowTalentoso }};" style-hover="transform: translateY(-2px);">
+            <div style="font-size: 20px;">🔵</div>
+            <div style="font-size: 13px; font-weight: 700; letter-spacing: .1em;">TALENTOSO</div>
+          </div>
+        </div>
+        <div style="background: #ffffff; padding: 16px 18px; margin-top: 12px; min-height: 210px; box-shadow: 0 6px 18px rgba(22,41,77,.07);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 800; color: #16294d;">{{ perfilTitulo }}</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #454b57; margin-top: 8px; text-wrap: pretty;">{{ perfilTexto }}</div>
+          <div style="height: 1px; background: #e6e0d2; margin: 12px 0;"></div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">{{ perfilLista }}</div>
+        </div>
+        <div style="background: #fdf3dd; border: 1px solid #e6cf9c; padding: 12px 14px; margin-top: 12px; font-size: 12.5px; line-height: 1.5; color: #5c5442; text-wrap: pretty;">En su propia área, el talentoso puede rendir más que el superdotado; fuera de ella rinde menos, incluso por debajo de sus compañeros. El superdotado sostiene un buen rendimiento en cualquier área cognitiva.</div>
+      </div>
+
+      <div>
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: .14em; color: #16294d; margin-bottom: 10px;">TIPOLOGÍA · TOCA CADA TIPO</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">{{ tipologia }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="b4" style="padding: 24px 34px 8px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 4px;">
+      <div style="width: 38px; height: 38px; border-radius: 50%; background: #16294d; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 700; font-family: 'Playfair Display', serif;">4</div>
+      <div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 800; color: #16294d;">Instrumentos de identificación</div>
+        <div style="font-size: 12.5px; color: #c69b3f; font-weight: 700; letter-spacing: .06em;">PROTOCOLO DE CASTELLÓ Y BATLLE (1998)</div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
+      <div style="background: #f5f2ea; border: 1px solid #e3dccb; padding: 20px;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 800; color: #17797a;">BADyG–E3</div>
+        <div style="font-size: 12px; color: #6c7280; line-height: 1.4;">Batería de Aptitudes Diferenciales y Generales · Yuste (rev. 2011) · CEPE</div>
+        <div style="display: flex; flex-direction: column; gap: 7px; margin-top: 14px;">{{ badyg }}</div>
+        <div style="background: #ffffff; padding: 14px 16px; margin-top: 12px; min-height: 92px; border-left: 4px solid #17797a;">
+          <div style="font-size: 13px; font-weight: 700; color: #16294d;">{{ badygTitulo }}</div>
+          <div style="font-size: 13px; line-height: 1.55; color: #4b515d; margin-top: 5px; text-wrap: pretty;">{{ badygTexto }}</div>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;">
+          <span style="font-size: 11px; background: #e4efef; color: #146263; padding: 5px 9px; border-radius: 999px; font-weight: 600;">9 pruebas × 32 ítems</span>
+          <span style="font-size: 11px; background: #e4efef; color: #146263; padding: 5px 9px; border-radius: 999px; font-weight: 600;">Centiles y CI de desviación</span>
+          <span style="font-size: 11px; background: #e4efef; color: #146263; padding: 5px 9px; border-radius: 999px; font-weight: 600;">Consistencia interna excelente</span>
+        </div>
+      </div>
+
+      <div style="background: #f5f2ea; border: 1px solid #e3dccb; padding: 20px;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 800; color: #7a4b8c;">TTCT</div>
+        <div style="font-size: 12px; color: #6c7280; line-height: 1.4;">Test de Pensamiento Creativo de Torrance (1974) · subpruebas verbal y figurativa</div>
+        <div style="display: flex; flex-direction: column; gap: 7px; margin-top: 14px;">{{ ttct }}</div>
+        <div style="background: #ffffff; padding: 14px 16px; margin-top: 12px; min-height: 92px; border-left: 4px solid #7a4b8c;">
+          <div style="font-size: 13px; font-weight: 700; color: #16294d;">{{ ttctTitulo }}</div>
+          <div style="font-size: 13px; line-height: 1.55; color: #4b515d; margin-top: 5px; text-wrap: pretty;">{{ ttctTexto }}</div>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;">
+          <span style="font-size: 11px; background: #efe6f3; color: #6b3f7d; padding: 5px 9px; border-radius: 999px; font-weight: 600;">40 minutos</span>
+          <span style="font-size: 11px; background: #efe6f3; color: #6b3f7d; padding: 5px 9px; border-radius: 999px; font-weight: 600;">Tareas divergentes</span>
+          <span style="font-size: 11px; background: #efe6f3; color: #6b3f7d; padding: 5px 9px; border-radius: 999px; font-weight: 600;">Niños y adolescentes</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 14px; align-items: center; background: #16294d; color: #ffffff; padding: 14px 20px; margin-top: 16px;">
+      <div style="font-size: 24px;">👥</div>
+      <div>
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #c69b3f;">OTROS ESTUDIOS DE PERFIL</div>
+        <div style="font-size: 13px; line-height: 1.5; color: #dfe4ee;">TAMAI (adaptación personal, escolar, social y familiar) · DAT-5 (ocho aptitudes) · ESPQ (personalidad infantil) · BAS (socialización, padres y profesores) · entrevistas, observación e historial académico.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin: 26px 34px 0; background: #fdf3dd; border: 1px solid #e6cf9c; padding: 26px 30px; text-align: center;">
+    <div style="font-size: 11px; letter-spacing: .18em; color: #a97f24; font-weight: 700;">IDEA CLAVE</div>
+    <div style="font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 700; color: #16294d; line-height: 1.35; margin-top: 8px; text-wrap: pretty;">“La inteligencia es multidimensional; las altas capacidades requieren valorar tanto el potencial cognitivo como la creatividad, la adaptación y el contexto.”</div>
+  </div>
+
+  <div style="display: flex; gap: 18px; align-items: flex-start; padding: 20px 34px 30px; margin-top: 18px; border-top: 3px solid #16294d;">
+    <div style="font-size: 11px; font-weight: 700; letter-spacing: .14em; color: #c69b3f; min-width: 110px; padding-top: 2px;">REFERENCIAS</div>
+    <div style="font-size: 10.5px; line-height: 1.65; color: #6c7280; text-wrap: pretty;">Betancourt, J. y Valadez, M. D. (2012). <em>Cómo propiciar el talento y la creatividad en la escuela</em>. Manual Moderno. · Castelló, A. y de Batlle, C. (1998). Aspectos teóricos e instrumentales en la identificación del alumnado superdotado y talentoso. <em>Faisca</em>, (6), 26-66. · Krumm, G., Lemos, V. y Filippetti, V. (2018). Test de pensamiento creativo de Torrance (TTCT) verbal forma B. <em>Anuario de Investigaciones</em>, (25), 277-284. · Sánchez, M. (2007). <em>Configuración cognitivo-emocional en alumnos de altas habilidades</em>. Universidad de Murcia. · Yuste, C. (2011). <em>BADyG-E3</em>. CEPE. · Torrance, E. P. (1974). <em>TTCT</em>. Scholastic Testing Service.
+    <div style="margin-top: 8px; color: #8a8577;">Elaborado a partir de los contenidos de la Unidad 3, Psicología del talento, UNITEC.</div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;materia&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Psicología del talento&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;alumna&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Paola Odeth Ruiz Pichardo&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const TRI = {
+  none: { kicker: "TRES SUBTEORÍAS", titulo: "Inteligencia exitosa", texto: "Habilidad para conseguir los objetivos marcados dentro de un contexto sociocultural y según parámetros personales, aprovechando los puntos fuertes y compensando las debilidades.", lista: ["Toca cada círculo para ver su subteoría", "El equilibrio entre las tres permite un desempeño exitoso en distintos contextos y culturas"] },
+  analitica: { kicker: "SUBTEORÍA COMPONENCIAL", titulo: "Inteligencia analítica", texto: "Explica los mecanismos internos que conducen a una actuación inteligente. Integra metacomponentes, componentes de rendimiento y de adquisición del conocimiento.", lista: ["Analiza información y evalúa alternativas", "Resuelve problemas y juzga la calidad de las ideas", "Toma decisiones y planifica qué hacer", "La superioridad está en saber cómo, cuándo y dónde usar los metacomponentes"] },
+  creativa: { kicker: "SUBTEORÍA EXPERIENCIAL", titulo: "Inteligencia creativa", texto: "Pensar sobre algo de forma novedosa y poco común para crear soluciones únicas. Combina el afrontamiento de lo nuevo con la automatización de la información: el insight.", lista: ["Genera buenos problemas y buenas ideas", "Innova y tolera la ambigüedad", "Afronta situaciones nuevas y no familiares", "Codificación, combinación y comparación selectiva"] },
+  practica: { kicker: "SUBTEORÍA CONTEXTUAL", titulo: "Inteligencia práctica", texto: "Aplica lo analítico y lo creativo a la vida diaria. No puede medirse fuera del entorno habitual de la persona, donde valores y costumbres cambian.", lista: ["Se adapta al ambiente", "Selecciona contextos y estrategias adecuadas", "Modifica o transforma el entorno", "Aprende del error y pone el pensamiento en acción"] }
+};
+
+const PENTA = {
+  none: { kicker: "TEORÍA IMPLÍCITA PENTAGONAL", titulo: "Cinco criterios", texto: "Para considerar superdotado a un sujeto debe reunir al menos cinco criterios interrelacionados. Toca cada vértice del pentágono.", nota: "Ningún criterio basta por sí solo: se complementan entre sí." },
+  excelencia: { kicker: "CRITERIO 1", titulo: "Excelencia", texto: "Superioridad en alguna dimensión o conjunto de dimensiones respecto de otras personas: es extremadamente bueno o experto en algo.", nota: "Puede destacar en áreas como la creatividad o el emprendimiento." },
+  rareza: { kicker: "CRITERIO 2", titulo: "Rareza o atípico", texto: "Posee un alto nivel de un atributo poco común entre sus semejantes.", nota: "Complementa a la excelencia: si el atributo no se valora como inusual, no se considera superdotación." },
+  productividad: { kicker: "CRITERIO 3", titulo: "Productividad", texto: "La capacidad es potencialmente productiva: se traduce en productos, acciones o actuaciones con resultados concretos.", nota: "Criterio debatido: una alta puntuación en un test no basta, también cuenta el esfuerzo invertido." },
+  valor: { kicker: "CRITERIO 4", titulo: "Valor", texto: "La superioridad debe ser apreciable por el entorno y reconocida por la sociedad.", nota: "Aporta beneficios y es relevante para el individuo, su comunidad o la sociedad." },
+  demostrabilidad: { kicker: "CRITERIO 5", titulo: "Demostrabilidad", texto: "El criterio se demuestra mediante instrumentos válidos y confiables que midan las conductas propias de esa alta capacidad.", nota: "Sin fiabilidad y validez no hay certeza sobre la habilidad evaluada." }
+};
+
+const PERFILES = {
+  superdotado: { titulo: "Superdotado", texto: "Alto nivel de funcionamiento intelectual en todos y cada uno de los recursos cognitivos; la disponibilidad simultánea de buenos recursos permite combinarlos para resolver cualquier tipo de problema.", lista: ["Gran flexibilidad ante cualquier contenido", "Aprende con facilidad y con comportamiento independiente", "Suele incluir inteligencia social y emocional", "Riesgo de baja motivación y aburrimiento en clase"] },
+  talentoso: { titulo: "Talentoso", texto: "Buen rendimiento en áreas específicas —por ejemplo, la habilidad matemática—, con dominio dado por la velocidad de ejecución y la automatización de procesos.", lista: ["Destaca en uno o varios campos concretos", "Puede superar al superdotado dentro de su área", "Fuera de su área rinde por debajo de lo esperado", "Áreas académicas, artísticas, sociales o deportivas"] }
+};
+
+const TIPOS = [
+  { id: "simple", nombre: "Talento simple", color: "#17797a", texto: "Percentil 95 o superior en una sola aptitud específica: verbal, matemático, espacial, creativo o lógico." },
+  { id: "multiple", nombre: "Talento múltiple", color: "#16294d", texto: "Varias aptitudes específicas se sitúan en el percentil 95 o por encima; por ejemplo, talento matemático y artístico a la vez." },
+  { id: "complejo", nombre: "Talento complejo", color: "#c69b3f", texto: "Combinación de un talento académico o figurativo con una o varias aptitudes específicas que interactúan entre sí." },
+  { id: "conglomerado", nombre: "Talento conglomerado", color: "#7a4b8c", texto: "Combinación de varias aptitudes específicas que puntúan en el percentil 80 o por encima: académico, figurativo o figurativo-artístico." },
+  { id: "precocidad", nombre: "Precocidad", color: "#c4553f", texto: "Ritmo de aprendizaje y desarrollo superior al de los compañeros de la misma edad, en uno o más ámbitos." }
+];
+
+const BADYG = [
+  { id: "verbal", nombre: "Inteligencia verbal", texto: "Capacidad intelectual verbal: vocabulario, comprensión y asimilación de conceptos verbales (pruebas 1 y 4)." },
+  { id: "numerica", nombre: "Inteligencia numérica", texto: "Comprensión de relaciones numéricas y facilidad para manejar conceptos cuantitativos y de cálculo (pruebas 2 y 5)." },
+  { id: "espacial", nombre: "Inteligencia espacial", texto: "Resolución de problemas planteados de forma figurativa: dibujos, figuras geométricas y visualización (pruebas 3 y 6)." },
+  { id: "razonamiento", nombre: "Razonamiento", texto: "Razonamiento lógico-deductivo aplicado a material verbal, numérico y figurativo (pruebas 1, 2 y 3)." },
+  { id: "memoria", nombre: "Memoria", texto: "Retención y recuperación de la información presentada durante la aplicación." }
+];
+
+const TTCT = [
+  { id: "fluidez", nombre: "Fluidez", texto: "Aptitud para hacer asociaciones múltiples a partir de un estímulo único: cuántas respuestas produce." },
+  { id: "flexibilidad", nombre: "Flexibilidad", texto: "Variedad de categorías distintas entre las respuestas dadas." },
+  { id: "originalidad", nombre: "Originalidad", texto: "Respuestas novedosas, no familiares e inusuales frente a lo esperable." },
+  { id: "elaboracion", nombre: "Elaboración", texto: "Cantidad de detalles que la persona añade a su producción para enriquecerla." }
+];
+
+class Component extends DCLogic {
+  state = { tri: "none", penta: "none", perfil: "superdotado", tipo: "simple", badyg: "verbal", ttct: "fluidez" };
+
+  ring(color, on) { return on ? "0 0 0 7px " + color + "33, 0 8px 18px rgba(22,41,77,.2)" : "0 4px 12px rgba(22,41,77,.15)"; }
+
+  bullets(arr, color) {
+    return arr.map((t, i) => React.createElement("div", { key: i, style: { display: "flex", gap: 8, fontSize: 13, lineHeight: 1.45, color: "#454b57" } },
+      React.createElement("span", { style: { color: color, fontWeight: 700 } }, "•"),
+      React.createElement("span", null, t)));
+  }
+
+  rowList(items, activeId, onPick, accent) {
+    return items.map(it => {
+      const on = it.id === activeId;
+      const color = it.color || accent;
+      return React.createElement("div", {
+        key: it.id, onClick: () => onPick(it.id),
+        style: {
+          cursor: "pointer", background: on ? "#ffffff" : "rgba(255,255,255,.5)",
+          borderLeft: "4px solid " + (on ? color : "#d8d1c0"),
+          padding: "9px 12px", display: "flex", alignItems: "center", gap: 10,
+          boxShadow: on ? "0 4px 14px rgba(22,41,77,.10)" : "none", transition: "all .15s"
+        }
+      },
+        React.createElement("span", { style: { width: 9, height: 9, borderRadius: "50%", background: on ? color : "#c9c2b1", flex: "0 0 auto" } }),
+        React.createElement("span", { style: { fontSize: 13.5, fontWeight: on ? 700 : 600, color: on ? "#16294d" : "#5f6470" } }, it.nombre));
+    });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const tri = TRI[s.tri], penta = PENTA[s.penta], perfil = PERFILES[s.perfil];
+    const tipo = TIPOS.find(t => t.id === s.tipo);
+    const set = k => v => this.setState({ [k]: v });
+    const tipoDetalle = React.createElement("div", { style: { background: "#ffffff", padding: "14px 16px", marginTop: 10, borderTop: "4px solid " + tipo.color, boxShadow: "0 6px 18px rgba(22,41,77,.07)" } },
+      React.createElement("div", { style: { fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 800, color: "#16294d" } }, tipo.nombre),
+      React.createElement("div", { style: { fontSize: 13.5, lineHeight: 1.6, color: "#454b57", marginTop: 6 } }, tipo.texto));
+
+    return {
+      materia: this.props.materia ?? "Psicología del talento",
+      alumna: this.props.alumna ?? "Paola Odeth Ruiz Pichardo",
+
+      triKicker: tri.kicker, triTitulo: tri.titulo, triTexto: tri.texto,
+      triLista: this.bullets(tri.lista, "#c69b3f"),
+      pickAnalitica: () => this.setState({ tri: s.tri === "analitica" ? "none" : "analitica" }),
+      pickCreativa: () => this.setState({ tri: s.tri === "creativa" ? "none" : "creativa" }),
+      pickPractica: () => this.setState({ tri: s.tri === "practica" ? "none" : "practica" }),
+      shadowAnalitica: this.ring("#16294d", s.tri === "analitica"),
+      shadowCreativa: this.ring("#17797a", s.tri === "creativa"),
+      shadowPractica: this.ring("#c69b3f", s.tri === "practica"),
+
+      pentaKicker: penta.kicker, pentaTitulo: penta.titulo, pentaTexto: penta.texto, pentaNota: penta.nota,
+      pickExcelencia: () => this.setState({ penta: s.penta === "excelencia" ? "none" : "excelencia" }),
+      pickRareza: () => this.setState({ penta: s.penta === "rareza" ? "none" : "rareza" }),
+      pickProductividad: () => this.setState({ penta: s.penta === "productividad" ? "none" : "productividad" }),
+      pickValor: () => this.setState({ penta: s.penta === "valor" ? "none" : "valor" }),
+      pickDemostrabilidad: () => this.setState({ penta: s.penta === "demostrabilidad" ? "none" : "demostrabilidad" }),
+      shadowExcelencia: this.ring("#7a4b8c", s.penta === "excelencia"),
+      shadowRareza: this.ring("#c69b3f", s.penta === "rareza"),
+      shadowProductividad: this.ring("#17797a", s.penta === "productividad"),
+      shadowValor: this.ring("#c4553f", s.penta === "valor"),
+      shadowDemostrabilidad: this.ring("#6f9b3f", s.penta === "demostrabilidad"),
+
+      perfilTitulo: perfil.titulo, perfilTexto: perfil.texto,
+      perfilLista: this.bullets(perfil.lista, s.perfil === "superdotado" ? "#17797a" : "#16294d"),
+      pickSuper: () => this.setState({ perfil: "superdotado" }),
+      pickTalentoso: () => this.setState({ perfil: "talentoso" }),
+      shadowSuper: s.perfil === "superdotado" ? "0 0 0 4px #17797a55, 0 8px 16px rgba(22,41,77,.18)" : "none",
+      shadowTalentoso: s.perfil === "talentoso" ? "0 0 0 4px #16294d55, 0 8px 16px rgba(22,41,77,.18)" : "none",
+
+      tipologia: [].concat(this.rowList(TIPOS, s.tipo, set("tipo")), [tipoDetalle]),
+
+      badyg: this.rowList(BADYG, s.badyg, set("badyg"), "#17797a"),
+      badygTitulo: BADYG.find(b => b.id === s.badyg).nombre,
+      badygTexto: BADYG.find(b => b.id === s.badyg).texto,
+      ttct: this.rowList(TTCT, s.ttct, set("ttct"), "#7a4b8c"),
+      ttctTitulo: TTCT.find(t => t.id === s.ttct).nombre,
+      ttctTexto: TTCT.find(t => t.id === s.ttct).texto
+    };
+  }
+}
+
+</script>
+</body>
+</html>
